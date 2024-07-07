@@ -1,11 +1,12 @@
 body {
     background-color: lightblue;
     display: flex;
+    /* For unknown sizes we need the body to be flexible*/
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 
-    /* For unknown sizes we need the body to be flexible*/
+
 
 }
