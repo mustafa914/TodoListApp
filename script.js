@@ -1,18 +1,26 @@
 const todoForm = document.getElementById("todoForm");
 const todoInput = document.getElementById("todoInput");
-var todoList = document.getElementById("todoList");
+const todoList = document.getElementById("todoList");
 
 todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
     if (todoInput.value.trim() !== "") {
-        var inputValue = todoInput.value;
-        let li = document.createElement("li");
-        var node = document.createTextNode(inputValue);
+        const inputValue = todoInput.value;
+        const li = document.createElement("li");
+        const node = document.createTextNode(inputValue);
         li.appendChild(node);
+
+        const delButton = document.createElement("button");
+        delButton.textContent = "Delete";
+        delButton.addEventListener("click", (e) => { todoList.removeChild(li); });
+        li.appendChild(delButton);
+
         todoList.appendChild(li);
         todoInput.value = "";
     }
 
 });
 
-to
+function() {
+
+}
